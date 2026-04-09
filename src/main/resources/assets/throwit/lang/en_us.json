@@ -1,5 +1,7 @@
 {
   "item.throwit.godbolt": "§9GodBolt§r",
+  "tooltip.throwit.godbolt.tooltip": "This is where the fun begins...",
 
-  "tooltip.throwit.godbolt.tooltip": "This is where the fun begins..."
+  "item.throwit.ironlump": "Lump of Iron",
+  "tooltip.throwit.ironlump.tooltip": "Overheated and Melted, Unusable in crafting"
 }
