@@ -50,6 +50,9 @@ public class ThrowIt
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.GODBOLT);
         }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.ROCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
