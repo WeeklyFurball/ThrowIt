@@ -2,6 +2,7 @@ package com.weeklyfurball.throwit.item;
 
 import com.weeklyfurball.throwit.ThrowIt;
 import com.weeklyfurball.throwit.item.custom.GodboltItem;
+import com.weeklyfurball.throwit.item.custom.IronLumpItem;
 import com.weeklyfurball.throwit.item.custom.RockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +16,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> GODBOLT = ITEMS.register("godbolt", () -> new GodboltItem(new Item.Properties().durability(1000)));
     public static final RegistryObject<Item> ROCK = ITEMS.register("rock", () -> new RockItem(new Item.Properties()));
+    public static final RegistryObject<Item> IRONLUMP = ITEMS.register("ironlump", () -> new IronLumpItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

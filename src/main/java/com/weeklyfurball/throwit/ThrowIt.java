@@ -52,6 +52,7 @@ public class ThrowIt
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.ROCK);
+            event.accept(ModItems.IRONLUMP);
         }
     }
 
