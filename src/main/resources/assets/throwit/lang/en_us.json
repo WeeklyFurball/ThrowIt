@@ -1,3 +1,5 @@
 {
-  "item.throwit.godbolt": "GodBolt"
+  "item.throwit.godbolt": "§9GodBolt§r",
+
+  "tooltip.throwit.godbolt.tooltip": "This is where the fun begins..."
 }
