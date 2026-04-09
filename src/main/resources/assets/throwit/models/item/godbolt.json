@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
-  "texures": {
+  "textures": {
     "layer0": "throwit:item/godbolt"
   }
 }
