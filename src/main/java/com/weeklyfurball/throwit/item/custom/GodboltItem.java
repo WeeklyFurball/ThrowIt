@@ -37,7 +37,7 @@ import java.util.List;
 
 public class GodboltItem extends Item {
     public static final int THROW_THRESHOLD_TIME = 6;
-    public static final float BASE_DAMAGE = 50.0F;
+    public static final float BASE_DAMAGE = 30.0F;
     public static final float SHOOT_POWER = 100.0F;
 
     public GodboltItem(Properties pProperties) {
