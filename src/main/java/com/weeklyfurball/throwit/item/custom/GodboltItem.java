@@ -55,7 +55,7 @@ public class GodboltItem extends Item {
     public UseAnim getUseAnimation(ItemStack pStack){ return UseAnim.SPEAR; }
 
     @Override
-    public InteractionResultHolder<ItemStack>> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand){
+    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand){
         ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
         pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
                 SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL);
