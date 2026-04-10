@@ -38,10 +38,6 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 
 public class GodboltItem extends Item {
-    public static final int THROW_THRESHOLD_TIME = 6;
-    public static final float BASE_DAMAGE = 30.0F;
-    public static final float SHOOT_POWER = 100.0F;
-
     public GodboltItem(Properties pProperties) {
         super(pProperties);
     }
@@ -58,6 +54,24 @@ public class GodboltItem extends Item {
     @Override
     public UseAnim getUseAnimation(ItemStack pStack){ return UseAnim.SPEAR; }
 
+    @Override
+    public InteractionResultHolder<ItemStack>> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand){
+        ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
+        pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
+                SoundEvents.BEACON_ACTIVATE, SoundSource.NEUTRAL);
+        if (!pLevel.isClientSide){
+            GodboltProjectileEntity godboltProjectile = new GodboltProjectileEntity(pPlayer, pLevel);
+            godboltProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
+            pLevel.addFreshEntity(godboltProjectile);
+        }
+
+        pPlayer.awardStat(Stats.ITEM_USED.get(this));
+        if (!pPlayer.getAbilities().instabuild) {
+            itemstack.shrink(1);
+        }
+
+        return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+    }
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponent, TooltipFlag pTooltipFlag){

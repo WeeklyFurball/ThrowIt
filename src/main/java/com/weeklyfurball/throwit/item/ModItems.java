@@ -14,7 +14,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ThrowIt.MOD_ID);
 
-    public static final RegistryObject<Item> GODBOLT = ITEMS.register("godbolt", () -> new GodboltItem(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> GODBOLT = ITEMS.register("godbolt", () -> new GodboltItem(new Item.Properties().durability(1000).stacksTo(1)));
     public static final RegistryObject<Item> ROCK = ITEMS.register("rock", () -> new RockItem(new Item.Properties()));
     public static final RegistryObject<Item> IRONLUMP = ITEMS.register("ironlump", () -> new IronLumpItem(new Item.Properties()));
 
